@@ -7,13 +7,27 @@ import Undead from '../Undead';
 import Zombie from '../Zombie';
 
 const expected = [
-  { name: 'Ваня', type: 'Bowman', health: 100, level: 1, attack: 25, defence: 25 },
-  { name: 'Ваня', type: 'Swordsman', health: 100, level: 1, attack: 40, defence: 10 },
-  { name: 'Ваня', type: 'Magician', health: 100, level: 1, attack: 10, defence: 40 },
-  { name: 'Ваня', type: 'Daemon', health: 100, level: 1, attack: 10, defence: 40 },
-  { name: 'Ваня', type: 'Undead', health: 100, level: 1, attack: 25, defence: 25 },
-  { name: 'Ваня', type: 'Zombie', health: 100, level: 1, attack: 40, defence: 10 },
-  { name: 'Ваня', type: 'Bowman', health: 92.5, level: 1, attack: 25, defence: 25 },
+  {
+    name: 'Ваня', type: 'Bowman', health: 100, level: 1, attack: 25, defence: 25
+  },
+  {
+    name: 'Ваня', type: 'Swordsman', health: 100, level: 1, attack: 40, defence: 10
+  },
+  {
+    name: 'Ваня', type: 'Magician', health: 100, level: 1, attack: 10, defence: 40
+  },
+  {
+    name: 'Ваня', type: 'Daemon', health: 100, level: 1, attack: 10, defence: 40
+  },
+  {
+    name: 'Ваня', type: 'Undead', health: 100, level: 1, attack: 25, defence: 25
+  },
+  {
+    name: 'Ваня', type: 'Zombie', health: 100, level: 1, attack: 40, defence: 10
+  },
+  {
+    name: 'Ваня', type: 'Bowman', health: 92.5, level: 1, attack: 25, defence: 25
+  },
 ];
 
 test('Test Bowerman', () => {
@@ -51,14 +65,14 @@ test('Test Character on Error', () => {
 });
 
 test('Test damage', () => {
-  let bowman = new Bowerman('Ваня', 'Bowman');
+  const bowman = new Bowerman('Ваня', 'Bowman');
   bowman.damage(10);
   const resalt = bowman;
   expect(resalt).toEqual(expected[6]);
 });
 
 test('Test levelUp', () => {
-  let bowman = new Character('Ваня', 'Bowman');
+  const bowman = new Character('Ваня', 'Bowman');
   bowman.levelUp();
   const resalt = bowman.level;
   expect(resalt).toBe(2);
