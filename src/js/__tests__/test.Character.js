@@ -8,25 +8,25 @@ import Zombie from '../Zombie';
 
 const expected = [
   {
-    name: 'Ваня', type: 'Bowman', health: 100, level: 1, attack: 25, defence: 25
+    name: 'Ваня', type: 'Bowman', health: 100, level: 1, attack: 25, defence: 25,
   },
   {
-    name: 'Ваня', type: 'Swordsman', health: 100, level: 1, attack: 40, defence: 10
+    name: 'Ваня', type: 'Swordsman', health: 100, level: 1, attack: 40, defence: 10,
   },
   {
-    name: 'Ваня', type: 'Magician', health: 100, level: 1, attack: 10, defence: 40
+    name: 'Ваня', type: 'Magician', health: 100, level: 1, attack: 10, defence: 40,
   },
   {
-    name: 'Ваня', type: 'Daemon', health: 100, level: 1, attack: 10, defence: 40
+    name: 'Ваня', type: 'Daemon', health: 100, level: 1, attack: 10, defence: 40,
   },
   {
-    name: 'Ваня', type: 'Undead', health: 100, level: 1, attack: 25, defence: 25
+    name: 'Ваня', type: 'Undead', health: 100, level: 1, attack: 25, defence: 25,
   },
   {
-    name: 'Ваня', type: 'Zombie', health: 100, level: 1, attack: 40, defence: 10
+    name: 'Ваня', type: 'Zombie', health: 100, level: 1, attack: 40, defence: 10,
   },
   {
-    name: 'Ваня', type: 'Bowman', health: 92.5, level: 1, attack: 25, defence: 25
+    name: 'Ваня', type: 'Bowman', health: 92.5, level: 1, attack: 25, defence: 25,
   },
 ];
 
