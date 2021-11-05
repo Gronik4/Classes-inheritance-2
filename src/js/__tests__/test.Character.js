@@ -60,8 +60,14 @@ test('Test Zombie', () => {
   expect(resalt).toEqual(expected[5]);
 });
 
-test('Test Character on Error', () => {
-  expect(Bowerman).toThrow();
+test('Test Character on Error name', () => {
+  const testErr1 = new Bowerman('В', 'Zombie').name;
+  expect(testErr1).toBe('Ошибка: в имени должно быть min - 2 символа, max - 10');
+});
+
+test('Test Character on Error type', () => {
+  const testErr1 = new Bowerman('Ваня', 'Zomb').type;
+  expect(testErr1).toBe('Ошибка типа персонажа!!');
 });
 
 test('Test damage', () => {
@@ -71,9 +77,24 @@ test('Test damage', () => {
   expect(resalt).toEqual(expected[6]);
 });
 
+test('Test damage deceased', () => {
+  const bowman = new Bowerman('Ваня', 'Bowman');
+  bowman.damage(145);
+  bowman.damage(10);
+  const resalt = bowman.health;
+  expect(resalt).toBe('Бить бесполезно. Умер.');
+});
+
 test('Test levelUp', () => {
   const bowman = new Character('Ваня', 'Bowman');
   bowman.levelUp();
   const resalt = bowman.level;
   expect(resalt).toBe(2);
+});
+
+test('Test levelUp on Error', () => {
+  const bowman = new Character('В', 'Bowman');
+  bowman.levelUp();
+  const resalt = bowman.health;
+  expect(resalt).toBe('Нельзя повысить уровень умершего!');
 });
